@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nescot After Dark: A student-run project documenting Nescot College in the late afternoon to early evening of November 28, 2024. Explore a gallery showcasing the college's unique atmosphere during this time.">
-    <meta name="keywords" content="Nescot, Nescot After Dark, Nescot College, student-run website, college documentation, gallery, student project, evening photography">
+    <meta name="description" content="Nescot.uk is a student-run project providing an alternative perspective on Nescot College. Find updates, insights, and resources from a student viewpoint.">
+    <meta name="keywords" content="Nescot, Nescot.uk, student-run website, Nescot College, updates, college resources, student project">
     <meta name="author" content="Creative Media Student">
     <meta name="robots" content="index, follow">
-    <title>Nescot After Dark - A Student-Run Project</title>
-    <link rel="canonical" href="https://nescot.uk/after-dark" />
+    <title>Nescot.uk - A Student Perspective on Nescot College</title>
+    <link rel="canonical" href="https://nescot.uk/" />
 
     <style>
         body {
@@ -19,146 +19,185 @@
             color: #333;
         }
 
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
         .container {
             width: 90%;
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
         }
 
-        h1 {
+        .container h2 {
             font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 400;
             margin-bottom: 20px;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
+        .container p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
         }
 
-        .gallery img {
-            width: 100%;
-            height: auto;
-            cursor: pointer;
-            border: 2px solid #ddd;
+        .updates {
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .updates article {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
             border-radius: 5px;
-            transition: transform 0.2s;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .gallery img:hover {
-            transform: scale(1.05);
+        .updates article h3 {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
         }
 
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
+        .updates article p {
+            font-size: 1rem;
+            margin: 0;
+            color: #555;
         }
 
-        .modal img {
-            max-width: 90%;
-            max-height: 80%;
-            border: 5px solid white;
-            border-radius: 10px;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2rem;
-            color: white;
-            cursor: pointer;
-            background: transparent;
-            border: none;
-        }
-
-        .footer {
-            margin-top: 20px;
+        .updates article time {
             font-size: 0.9rem;
-            text-align: center;
-            color: #666;
+            color: #999;
+            display: block;
+            margin-bottom: 10px;
         }
 
-        .footer a {
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer a {
             color: #007BFF;
             text-decoration: none;
         }
 
-        .footer a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Nescot After Dark</h1>
-            <h2>Documenting the college from the late afternoon to early evening of November 28, 2024.</h2>
-        </div>
+        <h1>Welcome to Nescot.uk</h1>
+        <p>A Student-Run Perspective on Nescot College</p>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="after-dark/">Gallery</a></li>
+            <li><a href="https://nescot.ac.uk" target="_blank">Official Website</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <div class="container gallery">
-            <!-- Dynamically adding 28 images -->
-            <script>
-                for (let i = 1; i <= 28; i++) {
-                    const imgSrc = `after-dark/NADPI (${i}).jpg`;
-                    document.write(`<img src="${imgSrc}" alt="Photograph of Nescot College - Image ${i} from the Nescot After Dark project">`);
-                }
-            </script>
+        <div class="container">
+            <h2>About This Project</h2>
+            <p>
+                Nescot.uk is a student-driven initiative designed to offer an alternative perspective on 
+                Nescot College. Created by creative media students, this website serves as a hub for 
+                insights, updates, and resources for anyone interested in learning more about the college 
+                from a student viewpoint.
+            </p>
+            <p>
+                Note: This website is <strong>not affiliated</strong> with the official Nescot College website. 
+                To visit the official website, click <a href="https://nescot.ac.uk" target="_blank">here</a>.
+            </p>
+
+            <h2>Updates and Information</h2>
+            <div class="updates">
+                <article>
+                    <h3>LRC Toilets Temporarily Out of Order</h3>
+                    <time datetime="2024-11-28">November 28, 2024</time>
+                    <p>
+                        The LRC Toilets are currently out of order. Here are the alternative toilets you can use:
+                    </p>
+                    <ul>
+                        <li><strong>Annexe near the Nurse's Office:</strong> Available <strong>after 3PM</strong>.</li>
+                        <li><strong>Second Floor Near Security:</strong> 
+                            If it is <strong>before 3PM</strong>, head up the staircase near security on the second floor, 
+                            turn right, and the toilets will be the first on your left. 
+                            <em>(Note: Not accessible if you are unable to walk upstairs.)</em>
+                        </li>
+                        <li><strong>Ground Floor for Central and North Wings:</strong>
+                            Use the lift near the central and north wings. Exit the lift and turn left. Head straight until you see 
+                            a doorway on the left. Walk through the doors and go diagonally to the doors ahead of you. 
+                            The toilets will be on your left.
+                        </li>
+                        <li><strong>The Yukon:</strong>
+                            Find the entrance facing the turnstile exit alleyway. When inside, make a right and continue straight. 
+                            The toilets will be on the left.
+                        </li>
+                        <li><strong>B2B Block:</strong>
+                            The B2B Block is the big gray building located between the LRC and Yukon buildings. 
+                            Enter through the two sets of doors into the lobby area. Find the doors on the right side (from the perspective of entering the building). 
+                            The toilets are located to the left and right of the second set of doors.
+                        </li>
+                    </ul>
+                    <p>
+                        There is no estimated time for the LRC Toilets to reopen, but they are expected to be operational again soon.
+                    </p>
+                </article>
+            </div>
         </div>
     </main>
 
-    <div class="modal" id="modal">
-        <button class="modal-close" id="modalClose">&times;</button>
-        <img id="modalImage" src="" alt="Full-size view of the selected photograph">
-    </div>
-
     <footer>
-        <div class="footer">
-            <p>This is a student-run website and not the official Nescot website. For the official website, visit <a href="https://nescot.ac.uk" target="_blank">nescot.ac.uk</a>.</p>
-        </div>
+        <p>&copy; 2024 Nescot.uk. A student-run project. | <a href="sitemap.xml">Sitemap</a></p>
     </footer>
-
-    <script>
-        // JavaScript for the modal functionality
-        const modal = document.getElementById('modal');
-        const modalImage = document.getElementById('modalImage');
-        const modalClose = document.getElementById('modalClose');
-        const galleryImages = document.querySelectorAll('.gallery img');
-
-        galleryImages.forEach(image => {
-            image.addEventListener('click', () => {
-                modal.style.display = 'flex';
-                modalImage.src = image.src;
-                modalImage.alt = image.alt;
-            });
-        });
-
-        modalClose.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target !== modalImage && e.target !== modalClose) {
-                modal.style.display = 'none';
-            }
-        });
-    </script>
 </body>
 </html>
