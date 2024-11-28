@@ -113,14 +113,8 @@
     </header>
 
     <main>
-        <div class="container gallery">
-            <!-- Dynamically adding 28 images -->
-            <script>
-                for (let i = 1; i <= 28; i++) {
-                    const imgSrc = `after-dark/NADPI (${i}).jpg`;
-                    document.write(`<img src="${imgSrc}" alt="Photograph of Nescot College - Image ${i} from the Nescot After Dark project">`);
-                }
-            </script>
+        <div class="container gallery" id="gallery">
+            <!-- Gallery images will be dynamically added here -->
         </div>
     </main>
 
@@ -136,18 +130,29 @@
     </footer>
 
     <script>
+        // Generate gallery dynamically
+        const gallery = document.getElementById('gallery');
+        const totalImages = 28;
+
+        for (let i = 1; i <= totalImages; i++) {
+            const img = document.createElement('img');
+            img.src = `NADPI (${i}).jpg`;
+            img.alt = `Photograph of Nescot College - Image ${i} from the Nescot After Dark project`;
+            img.loading = 'lazy'; // Lazy loading for performance
+            gallery.appendChild(img);
+        }
+
         // JavaScript for the modal functionality
         const modal = document.getElementById('modal');
         const modalImage = document.getElementById('modalImage');
         const modalClose = document.getElementById('modalClose');
-        const galleryImages = document.querySelectorAll('.gallery img');
 
-        galleryImages.forEach(image => {
-            image.addEventListener('click', () => {
+        gallery.addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG') {
                 modal.style.display = 'flex';
-                modalImage.src = image.src;
-                modalImage.alt = image.alt;
-            });
+                modalImage.src = e.target.src;
+                modalImage.alt = e.target.alt;
+            }
         });
 
         modalClose.addEventListener('click', () => {
